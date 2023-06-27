@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ↓ここにコードを追加 */
+body {
+  text-align: center;
+  height: 95vh;
+  position: relative;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  margin: 0 auto 10px;
+  background: #f5fcbd;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #666;
+  margin: 30px auto 0;
+}
+
+
+nav {
+  background: #f1fa9d;
+  width: 600px;
+  margin: 30px auto;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  flex-basis: 200px;
+  text-align: center;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: #666;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: yellowgreen;
+  color: #f1fa9d;
+  text-decoration: underline double;
+  display: block;
+  width: 100%;
+  height: 120%;
+  /* animation */
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+}
+
+
+div {
+  width: 600px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* pタグのボタン個別指定 */
+
+.anime {
+  width: 600px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px dotted #808080;
+}
+
+div.anime p {
+  flex-basis: 180px;
+  height: 30px;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+div.anime a {
+  flex-basis: 180px;
+  height: 30px;
+  color: aliceblue;
+  border-radius: 3px;
+  /* background: rgb(56, 247, 129); */
+  background: #90ee90;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+}
+
+div.anime p a {
+  font-weight: bold;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-top: 6px;
+  /* color: whitesmoke; */
+}
+
+p.btn1 a:hover {
+  background: rgb(206, 252, 175);
+  color: rgb(24, 131, 3);
+  box-shadow: 0 0 0px rgba(255, 255, 255 0.5) inset;
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: scaleX(1.1) scaleY(1.3);
+}
+
+p.btn2 a:hover {
+  background: rgb(24, 131, 3);
+  color: rgb(206, 252, 175);
+  box-shadow: 0 0 5px rgba(255, 255, 255 0.5) inset;
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: skew(10deg);
+}
+
+p.btn3 a:hover {
+  background: rgb(247, 51, 2);
+  color: rgb(250, 192, 178);
+  box-shadow: 0 0 5px rgba(255, 255, 255 0.5) inset;
+  border-radius: 5px;
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: translate(-5px);
+}
+
+p.btn4 a:hover {
+  background: url(../img/cat_001.jpg) no-repeat center center;
+  color: rgb(194, 76, 22);
+  box-shadow: 0 0 0px rgba(255, 255, 255 0.5);
+  border: 1px solid rgb(194, 76, 22);
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 5s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: scaleX(1.1) scaleY(1.6);
+}
+
+p.btn5 a:hover {
+  color: aliceblue;
+  background: rgb(3, 96, 158);
+  box-shadow: 0 0 5px rgba(255, 255, 255 0.5) inset;
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: rotate(-5deg);
+}
+
+p.btn6 a:hover {
+  color: yellow;
+  background: #333;
+  font-weight: bold;
+  /* animation */
+  transition-property: background, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+  transform: scalex(0.9) scaleY(0.7);
+}
+
+footer {
+  /*background: #333;*/
+  background: #8b4513;
+  color: #fff;
+  text-align: center;
+  /* 0623追記 */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* 矢印の練習 */
+/* ▲ */
+ul li a::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent #666;
+  display: inline-block;
+  vertical-align: middle;
+  top: -2px;
+  margin-right: 3px;
+}
+
+div.anime p a::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent #fff;
+  display: inline-block;
+  vertical-align: middle;
+  top: -2px;
+  margin-right: 3px;
+}
+
+/* ↑ここにコードを追加 */
